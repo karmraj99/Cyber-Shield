@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyber Shield</title>
+    <link rel="stylesheet" href="css.css">
+</head>
+<body>
+    <!-----------------------------------nav bar ----------------------------------------->
+    <nav>
+        <div class="navBar">
+            <div class="logo">
+                <img src="image/logo.png" alt="logo" class="imgLogo">
+                <div class="logoName">
+                    cyber shield
+                </div>
+            </div>
+
+            <div class="menu">
+                <button class="menuButton"><img src="image/menu.png" alt="Menu"></button>
+                <ul class="menuList">
+                    <li><a href="index.html">home</a></li>
+                    <li><a href="about.html">about</a></li>
+                    <li><a href="story.html">story</a></li>
+                    <li><a href="prevention.html">prevention</a></li>
+                    <li><a href="quiz.html">quiz</a></li>
+                </ul>
+            </div>          
+        </div>
+    </nav>
+    <!------------------------------------story page------------------------------------->
+    <div class="firstBox" style="background-image: url(image/story.png);">
+        <div class="firstBoxBanner">
+            <h1 class="firstBoxHeader" style="text-decoration: underline;">
+               read real story
+            </h1>
+            <p class="firstBoxHeaderP">Learn from real stories of people who faced online 
+                <br> scams, identity theft, and hacking attempts — 
+                <br> so you can stay one step ahead to 
+                <br> protect your data, and <br> make smarter choices online.</p>
+        </div>
+    </div>
+    <div class="storyBox">
+        <div class="storyBoxStory"><img src="image/storylogo.png"><p>story</p></div>
+        <div class="personStoryBox">
+            <div class="personStoryBox2">
+                <div class="userName"> Aman</div>
+                <div class="userTitle">The Job Offer Fraud</div>
+                <div class="userStory">A company offered me a data entry job from home. Everything seemed legit
+                     — website, offer letter, and WhatsApp HR. They said I had to buy “software access” for ₹1,200
+                      first. After I paid, they never replied again.</div>
+            </div>
+            <div class="personStoryBox2">
+                <div class="userName">Arjun</div>
+                <div class="userTitle">The Phishing Email Trap</div>
+                <div class="userStory">I got an email from what looked like my bank. It said, “Your account will
+                     be locked — verify now.” I clicked the link and entered my details. Within minutes, ₹5,000 was
+                      withdrawn from my account. It wasn’t the real bank site — just a lookalike page.</div>
+            </div>
+            <div class="personStoryBox2">
+                <div class="userName">Riya</div>
+                <div class="userTitle">The Fake Shopping Website</div>
+                <div class="userStory">Last year, I found a website selling branded shoes at 70% discount. It
+                     looked professional, had reviews, and even a support number. I ordered a pair and paid
+                      online. After a week, the site disappeared, and my number was blocked. That’s when I
+                       realized it was a fake e-commerce scam.</div>
+            </div>
+        </div>
+    </div>
+    <div class="shareBox">
+        <div class="shareBox1">share your story to help other</div>
+        <div class="shareBox2"><button class="shareButton">share</button></div>
+    </div>
+    <div class="shareInput">
+        <div class="shareInputBox">
+            <div class="shareInputBoxHead">share your story</div>
+            <form class="shareForm">
+            <div>
+                <label for="inputName">user name:</label>
+                <br>
+                <input type="text" id="inputName" class="inputHere" placeholder="User Name..." required>
+            </div>
+            <div>
+                <label for="inputTitle">title:</label>
+                <br>
+                <input type="text" id="inputTitle" class="inputHere" placeholder="Story Title..." required>
+            </div>
+            <div>
+                <label for="inputStory">story:</label>
+                <br>
+                <textarea id="inputStory" class="inputHere" placeholder="Type your story here..." rows="5" required></textarea>
+            </div>
+            <div class="cancelORshare">
+                <button type="button" class="cancel">cancel</button>
+                <button type="submit" class="share">share</button>
+            </div>
+        </form>
+        </div>
+    </div>
+<script src="nav.js"></script>
+<script src="story.js"></script>
+</body>
+</html>

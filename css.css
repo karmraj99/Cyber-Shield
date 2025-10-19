@@ -1,0 +1,826 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+/* --------------------------------nav bar--------------------------------------- */
+.navBar{
+    width: 100%;
+    padding: 0 30px 0 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo{
+    display: flex;
+}
+
+.imgLogo {
+    width: clamp(60px, 10vw, 80px);
+}
+
+.logoName{
+    display: flex;
+    align-items: center;
+    font-size: clamp(25px, 5vw, 32px);
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.menu{
+    position: relative;
+    padding-right: 20px;
+}
+
+.menu ul {
+    list-style: none;
+    display: flex;               
+    flex-wrap: wrap;              
+    justify-content: center;
+    gap: 50px;
+    padding: 0;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    text-transform: capitalize;
+    border-radius: 50px;
+    padding: 10px;
+}
+
+.menu li a:hover{
+    background-color: rgb(92, 115, 247);
+}
+
+.menuButton{
+    display: none;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.menuButton img{
+    width: 30px;
+    aspect-ratio: 1/0.9;
+}
+
+@media (max-width: 1030px) {
+    .menu ul{
+        gap: 15px;
+    }
+    
+}
+
+@media (max-width: 855px) {
+
+    .menuButton{
+        display: block;
+    }
+
+    .menu ul{
+        z-index: 10;
+        position: absolute;
+        top: 10px;
+        right: -30px;
+        background-color: white;
+        list-style: none;
+        display: flex;
+        flex-direction: column;               
+        flex-wrap: wrap;              
+        align-items: center;
+        display: none;
+        width: 130px;
+        padding: 10px 0 10px 15px;
+        border-radius: 10px 0 0 10px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+
+    .menu li a {
+    border-radius: 10px;
+    padding: 0px 10px 0 10px;
+}
+}
+
+/* -------------------------------hame page---------------------------------- */
+.firstBox{
+    position: relative;       
+    width: 100%;
+    padding: 30px;
+    background-color: rgb(38,38,255);
+    background-repeat: no-repeat;
+    background-position: top 50px right 50px;
+    background-size: clamp(300px, 40vw, 500px);
+}
+
+.firstBoxHeader{
+    z-index: 2;
+    position: relative;                
+    color: white;
+    font-size: clamp(24px, 7vw, 80px);
+    margin-right: -100px;
+    text-transform: capitalize;
+}
+
+.firstBoxHeaderP{
+    font-size: clamp(14px, 4vw, 36px);
+    position: relative;
+    text-transform: capitalize;
+    color: white;
+}
+
+.firstBoxButton{
+    font-size: clamp(10px, 4vw, 36px);
+    padding: 10px;
+    border-radius: 10px;
+    background-color: black;
+    color: white;
+    text-transform: capitalize;
+    text-decoration: none;
+    position: relative;
+    margin: 40px 0 10px 0;
+}
+
+.firstBoxBanner{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.firstBoxButton:hover{
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.76);
+}
+
+.secondeBox{
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.secondeBoxPera1{
+  font-size: clamp(18px, 5vw, 48px);
+  text-transform: capitalize;
+  font-weight: 700;
+}
+
+.secondeBoxPera2{
+    font-size: clamp(12px, 3.5vw, 28px);
+    text-transform: capitalize;
+}
+
+.thirdBox{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.thirdBoxs{
+    padding: 10px 40px 10px 40px;
+}
+
+.thirdBoxs-1P{
+    font-size: clamp(24px, 7vw, 80px);
+    font-weight: bold;
+}
+
+.thirdBoxs-2P{
+    font-size: clamp(12px, 3.5vw, 28px);
+}
+
+.fourthBox{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.fourthBoxs{
+    background-color: rgb(50, 50, 247);
+    padding: 40px;
+    max-width: 100%;
+    min-width: 0;
+    max-height: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+}
+
+.fourthBoxs:hover{
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.76);
+}
+
+.fourthBoxs img{
+    width: 100%;
+    max-width: 200px;
+    min-width: 10px;
+    aspect-ratio: 1/1;
+}
+
+.fourthBoxs p{
+     font-size: clamp(12px, 3.5vw, 28px);
+     font-weight: bold;
+     color: white;
+     text-transform: capitalize;
+}
+
+@media (max-width: 720px) {
+    .fourthBox{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+    
+}
+
+.fiveBox{
+    display: flex;
+}
+
+.fiveBox img{
+    width: clamp(60px, 10vw, 80px);
+    aspect-ratio: 1/1;
+}
+
+.fiveBoxs{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px 0 10px 0;
+}
+
+.fiveBoxs-1P{
+    font-size: clamp(12px, 3.5vw, 28px);
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.fiveBoxs-2P{
+    text-transform: capitalize;
+    font-size: clamp(12px, 3.5vw, 18px);
+}
+
+.uppercase{
+    text-transform: uppercase;
+}
+
+/* ------------------------------------------about page-------------------------------------------- */
+
+.aboutSecondBox{
+    padding: 40px;
+}
+
+.aboutSecondBox-1{
+    display: flex;
+    align-items: center;
+}
+
+.aboutSecondBox-1 img{
+    width: clamp(30px, 10vw, 80px);
+    aspect-ratio: 1/1.3;
+}
+
+.aboutSecondBox-1 p{
+    font-size: clamp(25px, 10vw, 70px);
+    font-weight: bold;
+    text-transform: uppercase;
+    padding-left: 10px;
+}
+
+.aboutSecondBox-2{
+    padding-top: 20px;
+    padding-left: 60px;
+}
+
+.aboutSecondBox-2 ul{
+    font-size: clamp(12px, 3.5vw, 28px);
+}
+
+.aboutThirdBox{
+    background-color: rgb(38,38,255);
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.member{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    gap: 20px;
+    width: 100%;
+    max-width: 250px;
+    background-color: black;
+    border: 2px solid white;
+}
+
+.member:hover{
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.952);
+}
+
+.member img{
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    object-fit: contain;
+}
+
+.name{
+    font-size: clamp(5px, 4vw, 25px);
+    font-weight: bold;
+    text-transform: capitalize;
+    color: white;
+}
+
+.aboutThirdBox-1{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.aboutThirdBox-1 img{
+    width: clamp(30px, 10vw, 80px);
+    aspect-ratio: 1/0.8;
+}
+
+.aboutThirdBox-1 p{
+    font-size: clamp(25px, 10vw, 70px);
+    font-weight: bold;
+    text-transform: uppercase;
+    padding-left: 10px;
+    color: white;
+}
+
+.aboutThirdBox-2{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+}
+
+@media (max-width: 1110px) {
+    .aboutThirdBox-2 {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        justify-items: center;
+    }
+}
+
+@media (max-width: 700px){
+    .aboutThirdBox-2 {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        justify-items: center;
+    }
+}
+
+@media (max-width: 500px){
+    .aboutThirdBox-2{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.member-about-p{
+    font-size: clamp(5px, 4vw, 15px);
+    color: white;
+    text-transform: capitalize;
+}
+
+.aboutfourthBox{
+    padding: 40px;
+}
+
+.aboutfourthBox-P{
+    font-size: clamp(10px, 4vw, 30px);
+    text-transform: capitalize;
+}
+
+.aboutfourthBox-P span{
+    font-weight: bold;
+}
+
+/* ---------------------------------------story page--------------------------------- */
+
+.storyBox{
+    background-color: rgb(38,38,255);
+    margin-top: 40px;
+    padding: 40px;
+}
+
+.personStoryBox{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    gap: 20px;
+}
+
+.personStoryBox2{
+    padding: 20px;
+    border: 2px solid;
+    background-color: rgb(226, 224, 224);
+    border: 2px solid rgb(226, 224, 224);
+}
+
+.userName{
+    font-size: clamp(10px, 4vw, 30px);
+    font-weight: 900;
+    padding: 20px 0 0 20px;
+    text-transform: uppercase;
+}
+
+.userTitle{
+    font-size: clamp(10px, 6vw, 30px);
+    padding-left: 40px;
+    text-transform: capitalize;
+}
+
+.userStory{
+    font-size: clamp(5px, 4vw, 20px);
+    padding-left: 40px;
+}
+
+.shareBox{
+    display: flex;
+    padding: 20px;
+    width: 100%;
+    gap: 10px;
+}
+
+.storyBoxStory{
+    display: flex;
+    padding-bottom: 20px;
+}
+
+.storyBoxStory img{
+    width: clamp(30px, 10vw, 80px);
+    aspect-ratio: 1/1;
+}
+
+.storyBoxStory p{
+    color: white;
+    font-size: clamp(24px, 7vw, 80px);
+    font-weight: 700;
+    text-transform: capitalize;
+}
+
+.shareBox1{
+    width: 80%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    padding-right: 10px;
+    text-transform: capitalize;
+    font-size: clamp(7px, 4vw, 25px);
+    font-weight: 600;
+}
+
+.shareBox2{
+    width: 20%;
+    display: flex;
+    align-items: center;
+}
+
+@media (max-width: 440px){
+    .shareBox{
+        flex-direction: column;
+    }
+
+    .shareBox1{
+        width: 100%;
+    }
+
+    .shareBox2{
+        width: 100%;
+        justify-content: end;
+    }
+}
+
+.shareButton{
+    font-size: clamp(10px, 4vw, 30px);
+    padding: 5px 20px;  
+    font-weight: bold;
+    border-radius: 50px;
+    text-transform: capitalize;
+    background-color: #30cf30;
+    border: 2px solid #30cf30;
+    color: white;
+}
+
+.shareButton:hover{
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.952);
+}
+
+.shareInput{
+    z-index: 10;
+    width: 100%;
+    max-width: 2000px;
+    background-color: rgba(153, 153, 153, 0.514);
+    min-height: 100vh;
+    position: fixed;
+    display: none;
+}
+
+.shareInputBox{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: #ffffff;
+    border: 2px solid #ffffff;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    max-width: 400px;
+    aspect-ratio: 1/1;
+    padding: 20px;
+}
+
+@media (max-width: 500px){
+    .shareInputBox{
+        max-width: 300px;
+    }
+}
+
+.shareInputBoxHead{
+    color: #436efe;
+    font-size: clamp(10px, 4vw, 30px);
+    font-weight: 700;
+    text-transform: capitalize;
+}
+
+label{
+    font-size: clamp(5px, 4vw, 20px);
+    text-transform: capitalize;
+    font-weight: 500;
+}
+
+.inputHere{
+    font-size: clamp(5px, 4vw, 20px);
+    border: 3px solid rgb(218, 212, 212);
+    padding-left: 5px;
+}
+
+.cancelORshare{
+    display: flex;
+    justify-content: end;
+    gap: 20px;
+    padding: 20px;
+    width: 100%;
+    max-width: 400px;
+}
+
+.cancel{
+    font-size: clamp(5px, 4vw, 20px);
+    border: 2px solid;
+    font-weight: 600;
+    text-transform: capitalize;
+    padding: 5px 10px 5px 10px;
+    border-radius: 30px;
+}
+
+.cancel:hover{
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.952);
+}
+
+.share{
+    font-size: clamp(5px, 4vw, 20px);
+    border: 2px solid;
+    font-weight: 600;
+    text-transform: capitalize;
+    padding: 5px 10px 5px 10px;
+    border-radius: 30px;
+    background-color: #30cf30;
+    border: 2px solid #30cf30;
+    color: white;
+}
+
+.share:hover{
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.952);
+}
+
+/* ---------------------------------------prevention page------------------------------------ */
+.preventionBox{
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.preventionBox1{
+    display: flex;
+    gap: 40px;
+}
+
+.preventionBox1pic{
+    background-color: rgb(38,38,255);
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.preventionBox1pic img{
+    width: clamp(30px, 20vw, 200px);
+}
+
+.preventionBox1writen p{
+    font-size: clamp(14px, 4vw, 36px);
+    text-transform: capitalize;
+    font-weight: 700;
+}
+
+.preventionBox1writen ul{
+    font-size: clamp(5px, 4vw, 25px);
+    text-transform: capitalize;
+}
+
+.preventionBox1writen ul li::marker{
+    color: rgb(38,38,255);
+}
+
+.doAndDoNot{
+    display: flex;
+    padding: 40px;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: rgb(38,38,255);
+}
+
+.do,
+.doNot{
+    background-color: #ffffff;
+    list-style-position: inside;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 500px;
+}
+
+.do{
+    color: #4c9202;
+}
+
+.doNot{
+    color: rgb(209, 6, 6);
+}
+
+.do p,
+.doNot p{
+    font-size: clamp(14px, 4vw, 36px);
+    text-transform: capitalize;
+    font-weight: 700;
+}
+
+.do ul li,
+.doNot ul li{
+    font-size: clamp(5px, 4vw, 25px);
+    text-transform: capitalize;
+
+}
+
+/* -------------------------------------------quiz page---------------------------- */
+
+.quizBox{
+    padding: 20px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: rgb(125, 125, 253);
+}
+
+.questionBox{
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 20px;
+    display: flex;  /* flex */
+    flex-direction: column;
+    gap: 20px;
+}
+
+.question{
+    font-size: clamp(14px, 4vw, 36px);
+}
+
+.questionBox2{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.option{
+    font-size: clamp(8px, 4vw, 30px);
+    border: 2px solid;
+    padding: 5px 5px 5px 15px;
+    border-radius: 20px;
+}
+
+.next{
+    font-size: clamp(8px, 4vw, 30px);
+    font-weight: 600;
+    background-color: #30cf30;
+    border: none;
+    border-radius: 20px;
+    width: min-content;
+    padding: 5px 15px;
+    text-transform: capitalize;
+    color: #ffffff;
+}
+
+.next:hover{
+        box-shadow: 0 5px 15px #30cf30;
+}
+
+.resultBox{
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 20px;
+    display: none;  /* flex */
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    max-width: 500px;
+}
+
+.resultBox1{
+    font-size: clamp(14px, 4vw, 36px);
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.resultBox2{
+    background-color: rgb(182, 180, 178);
+    width: 100%;
+    height: 6px;
+    border-radius: 5px
+}
+
+.resultBar{
+    background-color: #30cf30;
+    width: 0%;
+    height: 6px;
+    border-radius: 5px;
+}
+
+.resultBox3{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: max-content;
+}
+
+.emoji{
+    width: clamp(30px, 20vw, 50px);
+}
+
+.resultNumber{
+    font-size: clamp(10px, 4vw, 30px);
+}
+
+.resultBox4{
+    font-size: clamp(10px, 4vw, 20px);
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+.tryAgain{
+    font-size: clamp(8px, 4vw, 25px);
+    font-weight: 600;
+    background-color: #4030cf;
+    border: none;
+    border-radius: 20px;
+    padding: 5px 15px;
+    text-transform: capitalize;
+    color: #ffffff;
+}

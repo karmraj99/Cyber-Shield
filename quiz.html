@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyber Shield</title>
+    <link rel="stylesheet" href="css.css">
+</head>
+<body>
+    <!-----------------------------------nav bar ----------------------------------------->
+    <nav>
+        <div class="navBar">
+            <div class="logo">
+                <img src="image/logo.png" alt="logo" class="imgLogo">
+                <div class="logoName">
+                    cyber shield
+                </div>
+            </div>
+
+            <div class="menu">
+                <button class="menuButton"><img src="image/menu.png" alt="Menu"></button>
+                <ul class="menuList">
+                    <li><a href="index.html">home</a></li>
+                    <li><a href="about.html">about</a></li>
+                    <li><a href="story.html">story</a></li>
+                    <li><a href="prevention.html">prevention</a></li>
+                    <li><a href="quiz.html">quiz</a></li>
+                </ul>
+            </div>          
+        </div>
+    </nav>
+    <!------------------------------------prevention page------------------------------------->
+    <div class="firstBox" style="background-image: url(image/quiz.png); background-position: top 0px right 50px;">
+        <div class="firstBoxBanner">
+            <h1 class="firstBoxHeader">
+               test your cyber <br> awareness
+            </h1>
+            <p class="firstBoxHeaderP">
+                answer a few quick questions and see 
+                <br> how safe your online habits are.
+            </p>
+            <br>
+            <p class="firstBoxHeaderP">
+                each question helps you learn something
+                <br> new about staying safe online.
+            </p>
+            <button class="firstBoxButton" id="startTest">start test</button>
+        </div>
+    </div>
+
+    <div class="quizBox">
+        <div class="questionBox">
+            <div class="question"></div>
+            <div class="questionBox2">
+                <div id="option1" class="option" tabindex="0"></div>
+                <div id="option2" class="option" tabindex="0"></div>
+                <div id="option3" class="option" tabindex="0"></div>
+                <div id="option4" class="option" tabindex="0"></div>
+            </div>
+            <button class="next">next</button>
+        </div> 
+
+        <div class="resultBox">
+            <div class="resultBox1">your score</div>
+            <div class="resultBox2">
+                <div class="resultBar"></div>
+            </div>
+            <div class="resultBox3">
+                <img src="" class="emoji">
+                <div class="resultNumber"></div>
+            </div>
+            <div class="resultBox4"></div>
+            <button class="tryAgain">try again</button>
+        </div>
+    </div>
+    <script src="nav.js" defer></script>
+    <script src="quiz.js"></script>
+</body>
+</html>
