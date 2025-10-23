@@ -824,3 +824,32 @@ label{
     text-transform: capitalize;
     color: #ffffff;
 }
+
+/* --------------------------------footer------------------------------- */
+footer{
+    background-color: rgb(36, 36, 36);
+    color: white;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    text-transform: capitalize;
+}
+
+.footerImg{
+    width: clamp(10px, 10vw, 40px)
+}
+
+.footerFollowUs{
+    font-size: clamp(10px, 4vw, 20px);
+}
+
+.footerDiv3{
+    font-size: clamp(10px, 5vw, 40px);
+}
+
+.footerLastP{
+    font-size: clamp(5px, 4vw, 20px);
+}
